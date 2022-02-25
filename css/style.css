@@ -1,0 +1,272 @@
+
+
+/*Custom Property*/
+
+:root{
+
+    
+    /*Font Family*/
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    /*Font Weight*/
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    /*color*/
+    --clr-light: #fff;
+    --clr-dark: #000000;
+    --clr-accent: #010149;
+    /* --clr-accent: #f1620e; */
+
+    
+    /* --clr-dark: black; */
+    /* --clr-accent: #f1620e; */
+
+    /*Font Size*/
+    --fs-h1: 3rem;
+    --fs-h2:2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    /*Box Shadow*/
+    --bs1: 0.25em, 0.25em, 0.75em, rgba(0,0,.25),
+            0.125em, 0.125em, 0.25em, rgb(177, 43, 43);
+    --bs2: 10px 5px 5px rgb(252, 175, 8);
+
+}
+
+
+
+/*Typography*/
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1{
+    font-size: var(--fs-h1); 
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+h3{
+    font-size:var(--fs-h3);
+}
+
+
+/*Styling Header*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+/*Styling Navigation*/
+.nav{
+
+    text-align: center;
+    position: fixed;
+    background: black;
+    color: var(--clr-light);
+
+    /*Fill up the screen*/
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    /*Move left to right*/
+    transform: translateX(100%);
+    transition: transform 1s cubic-bezier(.5,0,.5,1);
+
+    /* opacity: 90%; */
+
+}
+
+
+
+
+.nav__item{
+    margin: .5em;
+    
+}
+
+.nav__list{
+
+
+  
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin:1em;
+    padding: 2em;
+
+   
+
+
+}
+
+.nav__link{
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    text-decoration: none;
+}
+
+
+.nav__link:hover{
+    color: var(--clr-accent);
+}
+
+
+.nav-toggle{
+    padding: .25em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+
+    /*Float Toggle Feature*/
+    z-index: 1000;
+}
+
+
+.nav-open .nav{
+
+   /*Float Toggle Feature*/
+   transform: translateX(0%);
+
+
+}
+
+/*This set up allows the toggle only appear when user stays at the top of website*/
+.nav-open .nav-toggle{
+    position: fixed;
+    
+    
+}
+
+.nav-open .hamburger{
+    transform: rotate(.625turn);
+    
+}
+
+.nav-open .hamburger::before{
+    transform: rotate(90dg);
+    
+}
+
+.nav-open .hamburger::after{
+    background: var(--clr-accent);
+    
+}
+
+
+
+
+
+
+
+
+.hamburger{
+
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+
+}
+
+.hamburger::before,
+.hamburger::after{
+    content:'';
+    position:absolute;
+    left: 0;
+    right: 0;
+   
+}
+
+.hamburger::before{
+    top: 6px;
+}
+.hamburger::after{
+    bottom: 6px;
+    
+
+}
+
+
+
+/* Styling Body */
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    
+}
+
+
+/* Styling Welcome Section */
+
+@media (min-width:800px) {
+
+    .welcome{
+        display: grid;
+        width: min-content; /*Shrink*/
+        margin: 0 auto;
+
+        padding-bottom: 40px;
+    }
+    
+}
+
+/* Styling Introduction Section */
+
+
+@media (min-width:800px) {
+
+    .intro{
+        display: grid;
+        width: min-content; /*Shrink*/
+        margin: 0 auto;
+
+        padding-bottom: 40px;
+    }
+    
+}
+
+
+
+/* Styling Footer*/
+
+footer{
+    text-align: center;
+}
+
+
+
