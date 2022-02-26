@@ -1,6 +1,4 @@
 
-
-
 /*Custom Property*/
 
 :root{
@@ -68,155 +66,16 @@ header{
     padding: 1em;
 }
 
-/*Styling Navigation*/
+/*Styling Nav*/
+
 .nav{
-
-    text-align: center;
-    position: fixed;
-    background: black;
-    color: var(--clr-light);
-
-    /*Fill up the screen*/
-    top: 0;
-    bottom:0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    /*Move left to right*/
-    transform: translateX(100%);
-    transition: transform 1s cubic-bezier(.5,0,.5,1);
-
-    /* opacity: 90%; */
-
+    margin-bottom: 3em;
 }
 
-
-
-
-.nav__item{
-    margin: .5em;
-    
+.nav_list li{
+    display:  inline;
+    padding-left: 2em;
 }
-
-.nav__list{
-
-
-  
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    margin:1em;
-    padding: 2em;
-
-   
-
-
-}
-
-.nav__link{
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
-    text-decoration: none;
-}
-
-
-.nav__link:hover{
-    color: var(--clr-accent);
-}
-
-
-.nav-toggle{
-    padding: .25em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: fixed;
-    right: 1em;
-    top: 1em;
-
-    /*Float Toggle Feature*/
-    z-index: 1000;
-}
-
-
-.nav-open .nav{
-
-   /*Float Toggle Feature*/
-   transform: translateX(0%);
-
-
-}
-
-/*This set up allows the toggle only appear when user stays at the top of website*/
-.nav-open .nav-toggle{
-    position: fixed;
-    
-    
-}
-
-.nav-open .hamburger{
-    transform: rotate(.625turn);
-    
-}
-
-.nav-open .hamburger::before{
-    transform: rotate(90dg);
-    
-}
-
-.nav-open .hamburger::after{
-    background: var(--clr-accent);
-    
-}
-
-
-
-
-
-
-
-
-.hamburger{
-
-    display: block;
-    position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after{
-
-    background: var(--clr-dark);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
-
-}
-
-.hamburger::before,
-.hamburger::after{
-    content:'';
-    position:absolute;
-    left: 0;
-    right: 0;
-   
-}
-
-.hamburger::before{
-    top: 6px;
-}
-.hamburger::after{
-    bottom: 6px;
-    
-
-}
-
 
 
 /* Styling Body */
@@ -237,7 +96,7 @@ body{
 @media (min-width:800px) {
 
     .welcome{
-        display: grid;
+        display: block;
         width: min-content; /*Shrink*/
         margin: 0 auto;
 
@@ -252,7 +111,7 @@ body{
 @media (min-width:800px) {
 
     .intro{
-        display: grid;
+        display: block;
         width: min-content; /*Shrink*/
         margin: 0 auto;
 
