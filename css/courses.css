@@ -1,0 +1,160 @@
+/*Custom Property*/
+
+:root{
+
+    
+    /*Font Family*/
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+
+    /*Font Weight*/
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    /*color*/
+    --clr-light: #fff;
+    --clr-dark: #000000;
+    --clr-accent: #010149;
+    /* --clr-accent: #f1620e; */
+
+    
+    /* --clr-dark: black; */
+    /* --clr-accent: #f1620e; */
+
+    /*Font Size*/
+    --fs-h1: 3rem;
+    --fs-h2:2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    /*Box Shadow*/
+    --bs1: 0.25em, 0.25em, 0.75em, rgba(0,0,.25),
+            0.125em, 0.125em, 0.25em, rgb(177, 43, 43);
+    --bs2: 10px 5px 5px rgb(252, 175, 8);
+
+    /* Layout Width */
+    --width: 80%;
+
+}
+
+
+
+/*Typography*/
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1{
+    font-size: var(--fs-h1); 
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+h3{
+    font-size:var(--fs-h3);
+}
+
+ul,li{
+
+    list-style: none;
+    
+}
+
+.section_subtitle{
+    margin-bottom: 1em;
+}
+
+
+/*Styling Header*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+/*Styling Nav*/
+
+.nav{
+    margin-bottom: 3em;
+}
+
+.nav_list li{
+    display:  inline;
+    padding-left: 2em;
+}
+
+
+/* Styling Body */
+
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    
+}
+
+
+
+
+
+
+
+/* Main Layout */
+
+@media (min-width:800px) {
+
+  
+
+
+    /* Styling Welcome Section */
+    .welcome{
+        display: block;
+        width: var(--width); /*Shrink*/
+        margin: 0 auto;
+
+        padding-bottom: 40px;
+        text-align: center;
+        
+
+        
+    }
+
+
+    .download_list {
+        display: inline;
+    }
+
+
+
+
+    
+    /* Styling Introduction Section */
+    .download_tutorial_conetent{
+        display: block;
+        width: var(--width); /*Shrink*/
+        margin: 0 auto;
+
+        padding-bottom: 40px;
+
+        text-align: center;
+    }
+    
+}
+
+
+
+
+/* Styling Footer*/
+
+footer{
+    text-align: center;
+}
