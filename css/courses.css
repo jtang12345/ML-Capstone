@@ -70,24 +70,102 @@ ul,li{
 }
 
 
+
+
 /*Styling Header*/
 
 header{
-    display:flex;
+   
     justify-content: space-between;
     padding: 1em;
+}
+
+mark{
+    background-color: white;
+    font-weight: var(--fw-bold);
 }
 
 /*Styling Nav*/
 
 .nav{
+    display: relative;
     margin-bottom: 3em;
+    background-color: black;
+    width: 100%;
+    
+
+    
+}
+
+.rectangle{
+
+    position: inherit;
+    width: 100%;
+    height: 78px;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #797979;
+    background-color: #000000;
+    box-sizing: border-box;
+
 }
 
 .nav_list li{
     display:  inline;
     padding-left: 2em;
 }
+
+
+.home_button,
+.prev_button,
+.next_button{
+
+   
+    
+    width: 125px;
+    height: 52px;
+
+    border-radius: 5;
+    padding: 2px, 2px, 2px, 2px;
+
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    line-height: normal;
+
+
+
+    background-color: red;
+
+    
+
+
+    
+
+    
+
+}
+
+.home_button{
+    
+    margin-left: 2em;
+    margin-top: .7em;
+    margin-right: 80%;
+}
+
+.prev_button,
+.next_button{
+
+   
+    margin-top: .7em;
+   
+
+    
+
+}
+
+
+
 
 
 /* Styling Body */
@@ -100,6 +178,40 @@ body{
     font-size: var(--fs-body);
     line-height: 1.6;
     
+}
+
+
+
+.content{
+    
+}
+
+.content_list{
+    background-color:  #ffff80;
+
+    width: max-content;
+
+    display: inline-block;
+
+    margin-left: 1em;
+
+    
+    
+
+   
+}
+
+.instruction{
+
+    margin-left: 2em;
+    
+    vertical-align: top;
+    text-align: left;
+
+    display: inline-block;
+    width: 60%;
+    text-align: rights;
+
 }
 
 
